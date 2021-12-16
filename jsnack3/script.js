@@ -10,11 +10,20 @@
 // Div Rosso
 let divRed = document.createElement("div");
 divRed.setAttribute("id", "red");
-divRed.innerHTML = "Emblema";
 document.body.appendChild(divRed);
 
 // Div verde
 let divGreen = document.createElement("div");
 divGreen.setAttribute("id", "green");
-divGreen.innerHTML = "Problema";
 document.body.appendChild(divGreen);
+
+let lostNumbers = [4, 8, 15, 16, 23, 42];
+
+for (i = 0; i < lostNumbers.length; i++) {
+  if (lostNumbers[i] % 2 != 0) {
+    divRed.innerHTML += lostNumbers[i] + " ";
+  }
+  else {
+    divGreen.innerHTML += lostNumbers[i] + " ";
+  }
+}
